@@ -2,10 +2,10 @@ import { createTheme } from '@mui/material';
 
 export const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     background: {
       default: '#212121',
-      paper: '#424242',
+      paper: '#BBBBBB',
     },
     primary: {
       main: '#8C9EFF',
@@ -15,6 +15,6 @@ export const theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 0,
+    borderRadius: 10,
   }
 });
