@@ -6,6 +6,7 @@ import MobileDrawer from './MobileDrawer';
 
 const DisplayMobile = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
   };
@@ -15,13 +16,12 @@ const DisplayMobile = () => {
       <IconButton
         {...{
           edge: 'start',
-          color: 'inherit',
           'aria-label': 'menu',
           'aria-haspopup': 'true',
           onClick: handleDrawerOpen,
         }}
       >
-        <MenuIcon color='primary'/>
+        <MenuIcon color="primary" />
       </IconButton>
       <CurrencyingLogo />
       <MobileDrawer open={drawerOpen} setOpen={setDrawerOpen} />

@@ -1,7 +1,10 @@
 import { Dispatch, SetStateAction } from 'react';
-import { Drawer, MenuItem, Box } from '@mui/material';
+import { Drawer, MenuItem, Box, Divider, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { headerButtons } from '../headerButtons';
+import { headerButtons, loginButtons } from '../headerButtons';
+import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import routes from '../../../routes';
 
 interface props {
   open: boolean;
@@ -40,6 +43,17 @@ const MobileDrawer = ({ open, setOpen }: props) => {
       }}
     >
       <Box sx={{ my: 2 }}>{getDrawerButtons()}</Box>
+      <Divider />
+      <Link {...{ to: routes.signUp, style: { textDecoration: 'none' } }}>
+        <Button sx={{ mt: 1, ml: 1, pr: 10 }} endIcon={<LoginRoundedIcon />}>
+          {loginButtons.SignUp.label}
+        </Button>
+      </Link>
+      <Link {...{ to: routes.signIn, style: { textDecoration: 'none' } }}>
+        <Button sx={{ ml: 1, pr: 10 }} endIcon={<AccountCircleRoundedIcon />}>
+          {loginButtons.SignIn.label}
+        </Button>
+      </Link>
     </Drawer>
   );
 };
