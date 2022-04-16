@@ -1,4 +1,4 @@
-import { Box, Button, Toolbar } from '@mui/material';
+import { Button, Toolbar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import CurrencyingLogo from './CurrencyingLogo';
 import { headerButtons } from '../headerButtons';
@@ -8,6 +8,7 @@ const DisplayDesktop = () => {
     return headerButtons.map(({ label, href }) => {
       return (
         <Button
+          sx={{ mx: 1 }}
           {...{
             key: label,
             color: 'inherit',
@@ -22,7 +23,7 @@ const DisplayDesktop = () => {
   };
 
   return (
-    <Toolbar sx={{ mp: 3, py: 1, backgroundColor: '#BBBBBB' }}>
+    <Toolbar sx={{ py: 1 }}>
       <CurrencyingLogo />
       {getMenuButtons()}
     </Toolbar>

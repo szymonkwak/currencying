@@ -1,30 +1,28 @@
-import React from 'react';
-import { Box, Button, ButtonGroup } from '@mui/material';
-import { Link } from 'react-router-dom';
-import routes from '../../routes';
+import { AppBar } from '@mui/material';
+import { useEffect, useState } from 'react';
+import DisplayDesktop from './sub-components/DisplayDesktop';
+import DisplayMobile from './sub-components/DisplayMobile';
 
 const Header = () => {
+  const [mobileView, setMobileView] = useState(false);
+
+  useEffect(() => {
+    const isMoblieView = () => {
+      window.innerWidth < 900 ? setMobileView(true) : setMobileView(false);
+    };
+    isMoblieView();
+    window.addEventListener('resize', isMoblieView);
+    return () => {
+      window.removeEventListener('resize', isMoblieView);
+    };
+  }, [mobileView]);
+
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        py: 2,
-        backgroundColor: '#161616',
-      }}
-    >
-      <ButtonGroup variant="outlined">
-        <Button component={Link} to={routes.pulpit}>
-          Pulpit
-        </Button>
-        <Button component={Link} to={routes.calc}>
-          Kalkulator
-        </Button>
-        <Button component={Link} to={routes.exchange}>
-          Wymiana
-        </Button>
-      </ButtonGroup>
-    </Box>
+    <header>
+      <AppBar position="static" sx={{ backgroundColor: '#CCCCCC' }}>
+        {mobileView ? <DisplayMobile /> : <DisplayDesktop />}
+      </AppBar>
+    </header>
   );
 };
 
