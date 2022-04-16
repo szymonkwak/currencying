@@ -5,7 +5,7 @@ export const theme = createTheme({
     mode: 'light',
     background: {
       default: '#212121',
-      paper: '#BBBBBB',
+      paper: '#CCCCCC',
     },
     primary: {
       main: '#8C9EFF',
@@ -16,5 +16,8 @@ export const theme = createTheme({
   },
   shape: {
     borderRadius: 10,
-  }
+  },
+  typography: {
+    fontFamily: ['Karla', 'sans-serif'].join(','),
+  },
 });

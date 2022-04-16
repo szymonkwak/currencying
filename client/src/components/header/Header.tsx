@@ -1,5 +1,6 @@
 import { AppBar } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { theme } from '../../theme/theme';
 import DisplayDesktop from './sub-components/DisplayDesktop';
 import DisplayMobile from './sub-components/DisplayMobile';
 
@@ -19,7 +20,7 @@ const Header = () => {
 
   return (
     <header>
-      <AppBar position="static" sx={{ backgroundColor: '#CCCCCC' }}>
+      <AppBar position="static" sx={{ backgroundColor: theme.palette.background.paper }}>
         {mobileView ? <DisplayMobile /> : <DisplayDesktop />}
       </AppBar>
     </header>

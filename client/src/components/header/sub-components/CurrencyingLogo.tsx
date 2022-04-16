@@ -1,10 +1,8 @@
-import { Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 const CurrencyingLogo = () => {
   return (
-    <Typography sx={{ mr: 20}} variant="h4" component="h1">
-      currencying
-    </Typography>
+    <Box component='img' height='50px' sx={{ mr: 20}} alt='logo' src='/currencying.svg'/>
   );
 };
 

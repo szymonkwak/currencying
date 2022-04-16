@@ -1,5 +1,6 @@
 const routes = {
-  pulpit: '/',
+  root: '/',
+  pulpit: '/home',
   calc: '/calc',
   exchange: '/exchange',
 };
