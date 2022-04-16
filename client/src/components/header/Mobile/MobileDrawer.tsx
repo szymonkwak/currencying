@@ -20,13 +20,12 @@ const MobileDrawer = ({ open, setOpen }: props) => {
           {...{
             component: Link,
             to: href,
-            color: 'inherit',
             style: { textDecoration: 'none' },
             key: label,
             onClick: handleDrawerClose,
           }}
         >
-          <MenuItem sx={{ pr: 10 }}>{label}</MenuItem>
+          <MenuItem sx={{ pr: 10, color: 'black' }}>{label}</MenuItem>
         </Link>
       );
     });

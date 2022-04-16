@@ -1,8 +1,8 @@
 import { AppBar } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { theme } from '../../theme/theme';
-import DisplayDesktop from './sub-components/DisplayDesktop';
-import DisplayMobile from './sub-components/DisplayMobile';
+import DisplayDesktop from './Desktop/DisplayDesktop';
+import DisplayMobile from './Mobile/DisplayMobile';
 
 const Header = () => {
   const [mobileView, setMobileView] = useState(false);

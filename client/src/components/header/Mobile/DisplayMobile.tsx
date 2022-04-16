@@ -1,7 +1,7 @@
 import { Toolbar, IconButton } from '@mui/material';
 import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import CurrencyingLogo from './CurrencyingLogo';
+import CurrencyingLogo from '../CurrencyingLogo';
 import MobileDrawer from './MobileDrawer';
 
 const DisplayMobile = () => {
@@ -21,7 +21,7 @@ const DisplayMobile = () => {
           onClick: handleDrawerOpen,
         }}
       >
-        <MenuIcon />
+        <MenuIcon color='primary'/>
       </IconButton>
       <CurrencyingLogo />
       <MobileDrawer open={drawerOpen} setOpen={setDrawerOpen} />
