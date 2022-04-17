@@ -1,7 +1,10 @@
 const routes = {
-  pulpit: '/',
-  calc: '/calc',
+  root: '/',
+  pulpit: '/home',
   exchange: '/exchange',
+  signUp: '/sign-up',
+  signIn: '/sign-in',
+  logout: '/logout',
 };
 
 export default routes;

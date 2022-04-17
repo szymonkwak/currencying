@@ -2,19 +2,22 @@ import { createTheme } from '@mui/material';
 
 export const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     background: {
       default: '#212121',
-      paper: '#424242',
+      paper: '#CCCCCC',
     },
     primary: {
-      main: '#8C9EFF',
+      main: '#1E7847',
     },
     secondary: {
       main: '#ffc400',
     },
   },
   shape: {
-    borderRadius: 0,
-  }
+    borderRadius: 10,
+  },
+  typography: {
+    fontFamily: ['Karla', 'sans-serif'].join(','),
+  },
 });
