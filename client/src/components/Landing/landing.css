@@ -1,0 +1,40 @@
+.landing {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing--content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.landing--card {
+  height: 20rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 30px black;
+}
+
+.landing--heading {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5rem;
+  text-shadow: 0 0 30px black, 0 0 15px black;
+  margin: 0;
+  padding: 0 2rem;
+}
+
+.landing--heading-tr {
+  letter-spacing: 0.6rem;
+  font-weight: 700;
+}
+
+.landing--heading-sm {
+  letter-spacing: -0.15rem;
+  font-weight: 400;
+}

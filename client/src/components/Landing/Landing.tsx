@@ -1,18 +1,19 @@
+import './landing.css';
 import { Box } from '@mui/material';
 import { theme } from '../../theme/theme';
+import card from '../../img/Card.svg';
 
 const Landing = () => {
   return (
-    <Box
-      sx={{
-        minHeight: 'calc(100vh - 64px)',
-        backgroundColor: theme.palette.background.paper,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      Landing
+    <Box className="landing" sx={{ backgroundColor: theme.palette.background.paper }}>
+      <Box className='landing--content'>
+        <img className="landing--card" src={card} alt="debit card" />
+        <Box component="h1" className="landing--heading">
+          Currency <br />
+          <span className="landing--heading-tr">trading</span> <br />
+          <span className="landing--heading-sm"> simulator</span>
+        </Box>
+      </Box>
     </Box>
   );
 };
