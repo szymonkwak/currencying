@@ -1,6 +1,7 @@
 .landing {
   min-height: calc(100vh - 64px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url('../../img/background.jpg');
@@ -12,6 +13,7 @@
 .landing--content {
   display: flex;
   align-items: flex-end;
+  margin: 80px 0;
 }
 
 .landing--card {
@@ -43,6 +45,11 @@
   font-weight: 400;
 }
 
+.landing--button {
+  transform: translateY(300px);
+  animation: button 2s forwards 1.2s;
+}
+
 @media screen and (max-width: 650px) {
   .landing--card {
     display: none;
@@ -64,5 +71,14 @@
   }
   to {
     opacity: 100%;
+  }
+}
+
+@keyframes button {
+  from {
+    transform: translateY(300px);
+  }
+  to {
+    transform: translateY(0);
   }
 }

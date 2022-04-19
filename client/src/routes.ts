@@ -1,6 +1,7 @@
 const routes = {
   root: '/',
   pulpit: '/home',
+  rates: '/rates',
   exchange: '/exchange',
   signUp: '/sign-up',
   signIn: '/sign-in',

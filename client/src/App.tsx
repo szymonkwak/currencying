@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Pulpit from './components/Pulpit/Pulpit';
 import Exchange from './components/Exchange/Exchange';
 import Landing from './components/Landing/Landing';
+import Rates from './components/Rates/Rates';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route path={routes.root} element={<Landing />} />
+          <Route path={routes.rates} element={<Rates />} />
           <Route path={routes.pulpit} element={<Pulpit />} />
           <Route path={routes.exchange} element={<Exchange />} />
         </Routes>
