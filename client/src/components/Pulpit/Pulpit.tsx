@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Grid, Paper, Typography } from '@mui/material';
-import Rates from '../Rates/Rates';
+import RatesTable from '../Rates/subcomponents/RatesTable';
 // import { useTContext } from '../../context/UserContext';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,9 +25,7 @@ const Pulpit = () => {
           </Item>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Item>
-            <Rates />
-          </Item>
+          <RatesTable />
         </Grid>
       </Grid>
     </Box>

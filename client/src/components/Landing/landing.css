@@ -1,0 +1,84 @@
+.landing {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.landing--content {
+  display: flex;
+  align-items: flex-end;
+  margin: 80px 0;
+}
+
+.landing--card {
+  height: 20rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 30px black;
+  animation: card 2s forwards;
+}
+
+.landing--heading {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5rem;
+  text-shadow: 0 0 30px black, 0 0 15px black;
+  margin: 0;
+  padding: 0 2rem;
+  transform: translate(220%);
+  animation: heading 2s forwards 1s;
+}
+
+.landing--heading-tr {
+  letter-spacing: 0.6rem;
+  font-weight: 700;
+}
+
+.landing--heading-sm {
+  letter-spacing: -0.15rem;
+  font-weight: 400;
+}
+
+.landing--button {
+  transform: translateY(300px);
+  animation: button 2s forwards 1.2s;
+}
+
+@media screen and (max-width: 650px) {
+  .landing--card {
+    display: none;
+  }
+}
+
+@keyframes heading {
+  from {
+    transform: translate(220%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes button {
+  from {
+    transform: translateY(300px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

@@ -2,6 +2,7 @@ import routes from '../../routes';
 
 export const headerButtons = [
   { label: 'Home', href: routes.root },
+  { label: 'Rates', href: routes.rates },
   { label: 'Wallet', href: routes.pulpit },
   { label: 'Exchange', href: routes.exchange },
 ];

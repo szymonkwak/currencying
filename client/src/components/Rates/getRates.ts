@@ -1,22 +1,8 @@
 import axios from 'axios';
 import Currency from '../../currency';
+import { RatesResponse, Response } from './typings';
 
 const KEY = process.env.REACT_APP_CURRENCY_API_KEY;
-
-type Response = {
-  data: {
-    base_currency_code: string;
-    base_currency_name: string;
-    amount: string;
-    updated_date: string;
-    rates: { string: { currency_name: string; rate: string; rate_for_amount: string } };
-  };
-};
-
-export type RatesResponse = Array<{
-  currencyCode: Currency;
-  info: { currency_name: string; rate: string; rate_for_amount: string };
-}>;
 
 export const getRates = async (from: Currency): Promise<RatesResponse> => {
   const { data }: Response = await axios.get(

@@ -8,7 +8,7 @@ const HeaderButtons = () => {
     return headerButtons.map(({ label, href }) => {
       return (
         <Button
-          sx={{ mx: 2, color: theme.palette.text.primary }}
+          sx={{ mx: 1, color: theme.palette.text.primary }}
           {...{
             component: Link,
             to: href,
