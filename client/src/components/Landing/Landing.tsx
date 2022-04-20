@@ -3,7 +3,7 @@ import { Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { theme } from '../../theme/theme';
 import routes from '../../routes';
-import card from '../../img/Card.png';
+import card from '../../img/Card.svg';
 
 const Landing = () => {
   return (
