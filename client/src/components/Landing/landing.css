@@ -54,6 +54,19 @@
   .landing--card {
     display: none;
   }
+  .landing--heading {
+    animation: heading 2s forwards;
+  }
+  .landing--button {
+    animation: button 2s forwards 0.2s;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .landing--heading {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 
 @keyframes heading {
@@ -70,7 +83,7 @@
     opacity: 0;
   }
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 

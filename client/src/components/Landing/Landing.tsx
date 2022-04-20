@@ -9,7 +9,7 @@ const Landing = () => {
   return (
     <Box className="landing" sx={{ backgroundColor: theme.palette.background.paper }}>
       <Box className="landing--content">
-        <img className="landing--card" src={card} alt="debit card" />
+        <Box component="img" className="landing--card" src={card} alt="debit card" />
         <Box component="h1" className="landing--heading">
           Currency <br />
           <span className="landing--heading-tr">trading</span> <br />
