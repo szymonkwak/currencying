@@ -13,19 +13,21 @@ const Landing = () => {
         <Box component="h1" className="landing--heading">
           Currency <br />
           <span className="landing--heading-tr">trading</span> <br />
-          <span className="landing--heading-sm"> simulator</span>
+          <span className="landing--heading-sm">simulator</span>
         </Box>
       </Box>
-      <Link to={routes.rates} {...{ style: { textDecoration: 'none' } }}>
-        <Button
-          variant="contained"
-          size="large"
-          className="landing--button"
-          sx={{ px: 4, backgroundColor: 'black', color: 'white' }}
-        >
-          Check rates
-        </Button>
-      </Link>
+      <Box className="landing--buttonContainer">
+        <Link to={routes.rates} {...{ style: { textDecoration: 'none' } }}>
+          <Button
+            variant="contained"
+            size="large"
+            className="landing--button"
+            sx={{ px: 4, backgroundColor: 'black', color: 'white' }}
+          >
+            Check rates
+          </Button>
+        </Link>
+      </Box>
     </Box>
   );
 };
