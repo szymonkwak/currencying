@@ -11,14 +11,16 @@
 }
 
 .landing--content {
+  padding: 50px;
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
-  margin: 80px 0;
+  margin-top: 60px;
 }
 
 .landing--card {
   height: 20rem;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 30px black;
   animation: card 2s forwards;
 }
@@ -31,7 +33,7 @@
   text-shadow: 0 0 30px black, 0 0 15px black;
   margin: 0;
   padding: 0 2rem;
-  transform: translate(220%);
+  transform: translate(200%);
   animation: heading 2s forwards 1s;
 }
 
@@ -45,9 +47,15 @@
   font-weight: 400;
 }
 
+.landing--buttonContainer {
+  padding: 10px;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
 .landing--button {
-  transform: translateY(300px);
-  animation: button 2s forwards 1.2s;
+  transform: translateY(200%);
+  animation: button 2s forwards 1s;
 }
 
 @media screen and (max-width: 650px) {
@@ -71,7 +79,7 @@
 
 @keyframes heading {
   from {
-    transform: translate(220%);
+    transform: translate(200%);
   }
   to {
     transform: translate(0);
@@ -89,7 +97,7 @@
 
 @keyframes button {
   from {
-    transform: translateY(300px);
+    transform: translateY(200%);
   }
   to {
     transform: translateY(0);
