@@ -1,6 +1,6 @@
 import { Box, Grid } from '@mui/material';
-import CommonRates from './subcomponents/CommonRates';
-import RatesTable from './subcomponents/RatesTable';
+import CommonRates from './components/CommonRates/CommonRates';
+import RatesTable from './components/RatesTable';
 
 const Rates = () => {
   return (

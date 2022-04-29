@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Grid, Paper, Typography } from '@mui/material';
-import RatesTable from '../Rates/subcomponents/RatesTable';
+import RatesTable from '../Rates/components/RatesTable';
 // import { useTContext } from '../../context/UserContext';
 
 const Item = styled(Paper)(({ theme }) => ({

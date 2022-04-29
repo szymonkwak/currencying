@@ -22,11 +22,11 @@ const RatesTable = () => {
   const [ratesArray, setRatesArray] = useState<RatesResponse>([]);
   const [selectedRate, setSelectedRate] = useState(Currency.PLN);
 
-  useEffect(() => {
-    getRates(selectedRate).then((response) => {
-      setRatesArray(response);
-    });
-  }, [selectedRate]);
+  // useEffect(() => {
+  //   getRates(selectedRate).then((response) => {
+  //     setRatesArray(response);
+  //   });
+  // }, [selectedRate]);
 
   const handleSelectFromCurrency = (e: SelectChangeEvent<Currency>) => {
     setSelectedRate(e.target.value as Currency);

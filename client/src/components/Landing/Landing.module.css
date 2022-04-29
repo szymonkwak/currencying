@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.landing--content {
+.content {
   padding: 50px;
   overflow: hidden;
   display: flex;
@@ -18,14 +18,14 @@
   margin-top: 60px;
 }
 
-.landing--card {
+.card {
   height: 20rem;
   background-color: rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 30px black;
   animation: card 2s forwards;
 }
 
-.landing--heading {
+.heading {
   color: white;
   font-size: 5rem;
   font-weight: 700;
@@ -37,41 +37,41 @@
   animation: heading 2s forwards 1s;
 }
 
-.landing--heading-tr {
+.trading {
   letter-spacing: 0.6rem;
   font-weight: 700;
 }
 
-.landing--heading-sm {
+.simulator {
   letter-spacing: -0.15rem;
   font-weight: 400;
 }
 
-.landing--buttonContainer {
+.buttonContainer {
   padding: 10px;
   margin-bottom: 100px;
   overflow: hidden;
 }
 
-.landing--button {
+.button {
   transform: translateY(200%);
   animation: button 2s forwards 1s;
 }
 
 @media screen and (max-width: 650px) {
-  .landing--card {
+  .card {
     display: none;
   }
-  .landing--heading {
+  .heading {
     animation: heading 2s forwards;
   }
-  .landing--button {
+  .button {
     animation: button 2s forwards 0.2s;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .landing--heading {
+  .heading {
     font-size: 3rem;
     line-height: 3rem;
   }

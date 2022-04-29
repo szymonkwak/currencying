@@ -14,9 +14,10 @@ import {
   SelectChangeEvent,
   Paper,
 } from '@mui/material';
-import Currency from '../../../currency';
-import { RatesResponse } from '../typings';
-import { getRates } from '../getRates';
+import Currency from '../../../../currency';
+import { RatesResponse } from '../../typings';
+import { getRates } from '../../getRates';
+import CRate from './CRate';
 // import { getCommonRates } from '../getCommonRates';
 
 const COMMON_CURRENCIES: Array<Currency> = [Currency.EUR, Currency.USD, Currency.GBP, Currency.CHF];
@@ -31,6 +32,7 @@ const CommonRates = () => {
   return (
     <Paper sx={{ p: 3 }}>
       <Typography variant="h5">Common exchange rates:</Typography>
+      {COMMON_CURRENCIES.map((rate) => ( <CRate rate={rate} />))}
       {/* <TableContainer>
         <Table sx={{ minWidth: 100 }}>
           <TableHead>
