@@ -13,7 +13,7 @@ https://currencying.netlify.app
 
 **Client:** React, TypeScript, Material UI
 
-**Server:** Not implemented yet
+**Server:** Spring Boot, Hibernate, Lombok 
 
 
 ## Environment Variables
