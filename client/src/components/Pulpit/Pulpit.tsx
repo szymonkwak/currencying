@@ -1,13 +1,7 @@
 import React from 'react';
-import { styled } from '@mui/material/styles';
 import { Box, Grid, Paper, Typography } from '@mui/material';
 import RatesTable from '../Rates/components/RatesTable';
 // import { useTContext } from '../../context/UserContext';
-
-const Item = styled(Paper)(({ theme }) => ({
-  padding: theme.spacing(5),
-  // textAlign: 'center',
-}));
 
 const Pulpit = () => {
   // const { user } = useTContext()
@@ -15,14 +9,14 @@ const Pulpit = () => {
     <Box sx={{ flexGrow: 1, m: 2 }}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Item>
+          <Paper sx={{ p: 3 }}>
             Saldo portfela:
             {/* <Typography variant="h4">{user.plnBalance} PLN</Typography> */}
             <Typography variant="h4">100 000 PLN</Typography>
             <Typography variant="h4"> 1 980 USD</Typography>
             <Typography variant="h4"> 9 070 EUR</Typography>
             <Typography variant="h4"> 2 980 CHF</Typography>
-          </Item>
+          </Paper>
         </Grid>
         <Grid item xs={12} md={6}>
           <RatesTable />
