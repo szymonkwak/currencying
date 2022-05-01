@@ -1,60 +1,23 @@
 import { useEffect, useState } from 'react';
-import {
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableContainer,
-  TableBody,
-  Typography,
-  Select,
-  Box,
-  MenuItem,
-  FormControl,
-  SelectChangeEvent,
-  Paper,
-} from '@mui/material';
-import Currency from '../../../../currency';
-import { RatesResponse } from '../../typings';
-import { getRates } from '../../getRates';
+import { Typography, Box, Paper } from '@mui/material';
+import { CommonRatesArray, getCommonRates } from '../../../../api/getCommonRates';
 import CRate from './CRate';
-// import { getCommonRates } from '../getCommonRates';
-
-const COMMON_CURRENCIES: Array<Currency> = [Currency.EUR, Currency.USD, Currency.GBP, Currency.CHF];
 
 const CommonRates = () => {
-  const [commonRates, setCommonRates] = useState<RatesResponse>([]);
+  const [commonRates, setCommonRates] = useState<CommonRatesArray>([]);
 
-    // useEffect(() => {
-    //     getCommonRates();
-    // }, []);
+  useEffect(() => {
+    // getCommonRates().then((rates) => setCommonRates(rates));
+  }, [commonRates]);
 
   return (
     <Paper sx={{ p: 3 }}>
       <Typography variant="h5">Common exchange rates:</Typography>
-      {COMMON_CURRENCIES.map((rate) => ( <CRate rate={rate} />))}
-      {/* <TableContainer>
-        <Table sx={{ minWidth: 100 }}>
-          <TableHead>
-            <TableRow>
-              <TableCell align="left">Currency pair</TableCell>
-              <TableCell align="right">Buy</TableCell>
-              <TableCell align="right">Sell</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {commonRates.map((rate) => (
-              <TableRow hover key={rate.currencyCode} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                <TableCell align="left">
-                  {rate.currencyCode} / {Currency.PLN} /\
-                </TableCell>
-                <TableCell align="right">{rate.info.rate}</TableCell>
-                <TableCell align="right">{rate.info.rate}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer> */}
+      <Box sx={{ mt: 2, display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        {commonRates.map((common) => (
+          <CRate key={common.rate.currencyFromCode} common={common} />
+        ))}
+      </Box>
     </Paper>
   );
 };

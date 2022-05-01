@@ -1,3 +1,5 @@
+export const SPREAD = 0.012;
+
 enum Currency {
   PLN = 'PLN',
   USD = 'USD',

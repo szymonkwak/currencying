@@ -15,11 +15,11 @@ import {
   Paper,
 } from '@mui/material';
 import Currency from '../../../currency';
-import { RatesResponse } from '../typings';
-import { getRates } from '../getRates';
+import { Rate } from '../../../api/typings';
+import { getRates } from '../../../api/getRates';
 
 const RatesTable = () => {
-  const [ratesArray, setRatesArray] = useState<RatesResponse>([]);
+  const [ratesArray, setRatesArray] = useState<Rate[]>([]);
   const [selectedRate, setSelectedRate] = useState(Currency.PLN);
 
   // useEffect(() => {
@@ -39,8 +39,8 @@ const RatesTable = () => {
         <FormControl hiddenLabel variant="filled" sx={{ minWidth: 100 }}>
           <Select variant="filled" value={selectedRate} onChange={handleSelectFromCurrency}>
             {ratesArray.map((rate) => (
-              <MenuItem key={rate.currencyCode} value={rate.currencyCode}>
-                {rate.currencyCode}
+              <MenuItem key={rate.currencyToCode} value={rate.currencyToCode}>
+                {rate.currencyToCode}
               </MenuItem>
             ))}
           </Select>
@@ -58,12 +58,12 @@ const RatesTable = () => {
           </TableHead>
           <TableBody>
             {ratesArray.map((rate) =>
-              rate.currencyCode !== selectedRate ? (
-                <TableRow hover key={rate.currencyCode} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                  <TableCell align="left">{rate.currencyCode}</TableCell>
-                  <TableCell align="left">{rate.info.currency_name}</TableCell>
-                  <TableCell align="right">{rate.info.rate}</TableCell>
-                  <TableCell align="right">{rate.info.rate}</TableCell>
+              rate.currencyToCode !== selectedRate ? (
+                <TableRow hover key={rate.currencyToCode} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                  <TableCell align="left">{rate.currencyToCode}</TableCell>
+                  <TableCell align="left">{rate.currencyToName}</TableCell>
+                  <TableCell align="right">{rate.buyRate}</TableCell>
+                  <TableCell align="right">{rate.sellRate}</TableCell>
                 </TableRow>
               ) : null
             )}

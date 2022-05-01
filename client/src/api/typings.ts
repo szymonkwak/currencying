@@ -1,4 +1,4 @@
-import Currency from '../../currency';
+import Currency from '../currency';
 
 export type Response = {
   data: {
@@ -10,7 +10,11 @@ export type Response = {
   };
 };
 
-export type RatesResponse = Array<{
-  currencyCode: Currency;
-  info: { currency_name: string; rate: string; rate_for_amount: string };
-}>;
+export type Rate = {
+  currencyToCode: Currency;
+  currencyToName: string;
+  currencyFromCode: Currency;
+  currencyFromName: string;
+  sellRate: string;
+  buyRate: string;
+};
