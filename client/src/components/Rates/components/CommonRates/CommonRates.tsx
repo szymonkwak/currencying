@@ -17,7 +17,7 @@ const CommonRates = () => {
       setCommonRates(rates);
       setLoading(false);
     });
-  }, [commonRates]);
+  }, []);
 
   return (
     <Box sx={{ p: mdScreen ? 1 : 3 }}>
